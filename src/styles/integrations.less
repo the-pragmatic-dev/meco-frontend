@@ -1,0 +1,29 @@
+#integrations {
+  overflow-y    : overlay;
+  height        : 100%;
+  padding-bottom: 8rem;
+
+  .integration-columns {
+
+    .column {
+
+      /* For all devices larger than @mobile */
+      @media screen and (min-width: @tablet) {
+        width: percentage(4 / @columns);
+      }
+
+      /* For all devices larger than @tablet */
+      @media screen and (min-width: @desktop) {
+        width: percentage(3 / @columns);
+      }
+
+      /* For all devices larger than @desktop */
+      @media screen and (min-width: @widescreen) {
+        width: percentage(2 / @columns);
+      }
+
+      /* For all devices larger than @widescreen */
+      @media screen and (min-width: @fullhd) {}
+    }
+  }
+}

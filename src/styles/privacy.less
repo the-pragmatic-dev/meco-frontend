@@ -1,0 +1,28 @@
+@privacy-padding-medium : 4rem;
+@privacy-padding-large  : 8rem;
+
+#privacy {
+  padding: @privacy-padding-medium 0 @privacy-padding-medium 0;
+
+  .privacy-section {
+    h6 {
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    /* For all devices larger than @mobile */
+    @media (min-width: @tablet) {
+      h6 {
+        text-align: left;
+      }
+    }
+  }
+
+  /* For all devices larger than @mobile */
+  @media (min-width: @tablet) {
+    padding: @privacy-padding-large 0 @privacy-padding-large 0;
+  }
+}

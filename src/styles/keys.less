@@ -1,0 +1,142 @@
+#keys {
+    display: flex;
+    flex   : 1;
+
+    #keys-list {
+        background-color: @lighter;
+        flex            : 1;
+        max-width       : 5.5rem;
+        position        : relative; // to enable absolute on footer
+
+        .keys-title {
+            padding-left: @padding-large;
+        }
+
+        .keys-toggle {
+            color : @medium;
+            cursor: pointer;
+
+            svg {
+                transform: rotate(180deg);
+
+                &:hover {
+                    color: darken(@medium, 10%);
+                }
+            }
+        }
+
+        .key-row {
+            align-items: center;
+            cursor     : pointer;
+            display    : flex;
+
+            .dot {
+                margin: @margin-small;
+            }
+
+            &.is-active {
+                background-color: @white;
+            }
+
+            &:not(.is-active):hover {
+                background-color: darken(@lighter, 3%);
+            }
+
+            .key-name {
+                max-width    : 20rem;
+                overflow     : hidden;
+                text-align   : center;
+                text-overflow: ellipsis;
+                white-space  : nowrap;
+            }
+        }
+
+        .keys-title,
+        .key-row,
+        .keys-new-key,
+        .footer {
+            opacity: 0;
+        }
+
+        &.is-active {
+            flex     : 0 0 100%;
+            max-width: none;
+
+            .keys-title,
+            .key-row,
+            .keys-new-key,
+            .footer {
+                opacity: 1;
+            }
+
+            .keys-toggle svg {
+                transform: rotate(0)
+            }
+
+            /* For all devices larger than @mobile */
+            @media (min-width: @tablet) {
+                max-width: 36rem;
+            }
+        }
+    }
+
+    #keys-content {
+        flex          : 1;
+        // enable scrolling within key windw
+        position      : absolute;
+        overflow-y    : overlay;
+        height        : 100%;
+        width         : 100%;
+        padding-bottom: 8rem; // to enable scrolling past footer
+
+        .empty-state {
+            position : absolute;
+            top      : 50%;
+            left     : 50%;
+            transform: translate(-50%, -50%);
+
+            figure {
+                background-size: contain;
+            }
+        }
+
+        h3 {
+            overflow     : hidden;
+            text-align   : center;
+            text-overflow: ellipsis;
+            white-space  : nowrap;
+        }
+
+        .keys-api-hash {
+            display: none;
+        }
+
+        .keys-actions {
+            text-align: center;
+        }
+
+        /* For all devices larger than @mobile */
+        @media (min-width: @tablet) {
+            h3 {
+                text-align: left;
+            }
+
+            .keys-api-hash {
+                display: flex;
+            }
+
+            .keys-actions {
+                text-align: right;
+            }
+        }
+    }
+
+    #keys-list.is-active+.overflow-container {
+        display: none; // hide content when list is active
+
+        /* For all devices larger than @mobile */
+        @media (min-width: @tablet) {
+            display: block;
+        }
+    }
+}

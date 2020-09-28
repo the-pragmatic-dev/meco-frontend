@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.fontSize": 10,
+    "debug.console.fontSize": 10,
+    "terminal.integrated.fontSize": 10,
+    "markdown.preview.fontSize": 10,
+    "less.lint.duplicateProperties": "warning",
+    "less.lint.float": "warning",
+    "less.lint.zeroUnits": "warning",
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+      "source.fixAll": true
+    },
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "full",
+  }
+}

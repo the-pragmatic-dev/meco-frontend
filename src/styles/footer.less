@@ -1,0 +1,35 @@
+@footer-padding-small : 2.5rem;
+
+.footer {
+
+  .copyright-container {
+    padding-top: @footer-padding-small;
+
+    .copyright {
+      text-align: center;
+    }
+
+    .copyright-links {
+      text-align: center;
+    }
+  }
+
+  /* For all devices larger than @mobile */
+  @media (min-width: @tablet) {
+    p {
+      max-width: 75%;
+    }
+
+    .copyright-container {
+      padding-top: @footer-padding-small;
+
+      .copyright {
+        text-align: left;
+      }
+
+      .copyright-links {
+        text-align: right;
+      }
+    }
+  }
+}

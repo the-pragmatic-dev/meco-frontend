@@ -1,0 +1,67 @@
+// make a loop for every combination in library
+.has-padding-right {
+  padding-right: @padding-medium;
+}
+
+.has-padding-left {
+  padding-left: @padding-normal;
+}
+
+.has-margin-right {
+  margin-right: @padding-medium;
+}
+
+.overflow-container {
+  position: relative;
+  height  : 100%;
+  width   : 100%;
+
+  /* For all devices larger than @mobile */
+  @media (min-width: @tablet) {
+    .footer {
+      .column:first-child {
+        text-align: left;
+      }
+
+      .column:last-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.page-section {
+
+  /* For all devices larger than @mobile */
+  @media (min-width: @tablet) {
+
+    p,
+    button,
+    .column {
+      margin: 0;
+    }
+
+    p,
+    .column {
+      padding: 0;
+    }
+
+    .column:first-child {
+      text-align: left;
+    }
+
+    .column:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.is-mobile-hcentered {
+  .is-hcentered();
+
+  /* For all devices larger than @mobile */
+  @media (min-width: @tablet) {
+    justify-content: left;
+    text-align     : left;
+  }
+}

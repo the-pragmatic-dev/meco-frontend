@@ -1,0 +1,90 @@
+#settings {
+  overflow-y    : overlay;
+  height        : 100%;
+  padding-bottom: 8rem;
+
+  .profile-edit {
+
+    figure {
+      background-size: contain;
+    }
+
+    .column {
+      text-align: center;
+    }
+
+    /* For all devices larger than @mobile */
+    @media (min-width: @tablet) {
+
+      p,
+      button,
+      .row,
+      .column {
+        margin: 0;
+      }
+
+      p,
+      .column {
+        padding: 0;
+      }
+
+      .profile-container {
+        padding-left: @padding-large;
+        text-align  : left;
+
+        .column:first-child {
+          text-align: left;
+        }
+
+        .column:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .profile-signin-method,
+  .profile-password,
+  .profile-email-preferences,
+  .profile-deactivate-account {
+
+    p {
+      margin-bottom: @margin-small;
+    }
+
+    .column {
+      padding: 0;
+    }
+
+    /* For all devices larger than @mobile */
+    @media (min-width: @tablet) {
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .profile-signin-method {
+    p {
+      margin-bottom: @margin-small;
+    }
+  }
+
+  .profile-password,
+  .profile-email-preferences,
+  .profile-deactivate-account {
+
+    /* For all devices larger than @mobile */
+    @media (min-width: @tablet) {
+
+      .column:first-child {
+        text-align: left;
+      }
+
+      .column:last-child {
+        text-align: right;
+      }
+    }
+  }
+}

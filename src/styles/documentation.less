@@ -1,0 +1,38 @@
+@docs-padding-small  : 2.5rem;
+@docs-padding-medium : 4rem;
+@docs-padding-large  : 8rem;
+
+#documentation {
+  padding: @docs-padding-medium 0 @docs-padding-medium 0;
+
+  .documentation-links {
+    background-color: @lighter;
+    padding         : @docs-padding-small;
+    max-height      : 107rem;
+
+    /* For all devices larger than @mobile */
+    @media (min-width: @tablet) {
+      overflow: scroll;
+      position: sticky;
+      top     : @docs-padding-small;
+    }
+  }
+
+  .documentation-content {
+    min-width: 0;
+    padding  : 0 @docs-padding-small;
+
+    table {
+      margin-bottom: @margin-normal;
+    }
+
+    .documentation-endpoint-heading {
+      margin-top: @margin-normal;
+    }
+  }
+
+  /* For all devices larger than @mobile */
+  @media (min-width: @tablet) {
+    padding: @docs-padding-large 0 @docs-padding-large 0;
+  }
+}
