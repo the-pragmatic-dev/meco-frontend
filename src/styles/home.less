@@ -100,4 +100,13 @@
       text-align: right !important;
     }
   }
+
+  .is-mobile-hidden {
+    display: none;
+
+    /* For all devices larger than @tablet */
+    @media (min-width: @desktop) {
+      display: block;
+    }
+  }
 }

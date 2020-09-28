@@ -45,7 +45,7 @@ module.exports = (initialVnode) => {
                 }
               }, 'Create a free account')
             ]))),
-            m('.column.is-6',
+            m('.column.is-6.is-mobile-hidden',
               m('img', {
                 src: svgService.home
               })
