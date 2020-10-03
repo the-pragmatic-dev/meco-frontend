@@ -7,7 +7,7 @@ const AccountService = {
   findAuthenticatedAccount: () => {
     m.request({
       method: 'GET',
-      url: `${settings.host}:${settings.port}/${settings.version}/accounts/me`,
+      url: `${settings.host}/${settings.version}/accounts/me`,
       headers: {
         Authorization: `Bearer ${authService.accessToken}`
       }
@@ -18,7 +18,7 @@ const AccountService = {
   update: (account) => {
     m.request({
       method: 'PUT',
-      url: `${settings.host}:${settings.port}/${settings.version}/accounts/me`,
+      url: `${settings.host}/${settings.version}/accounts/me`,
       headers: {
         Authorization: `Bearer ${authService.accessToken}`
       },

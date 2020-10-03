@@ -18,7 +18,7 @@ const ActuatorService = {
   findInfo: () => {
     m.request({
       method: 'GET',
-      url: `${settings.host}:${settings.port}/actuator/info`
+      url: `${settings.host}/actuator/info`
     }).then((response) => {
       ActuatorService.info = response;
     });
@@ -26,7 +26,7 @@ const ActuatorService = {
   findHealth: () => {
     m.request({
       method: 'GET',
-      url: `${settings.host}:${settings.port}/actuator/health`
+      url: `${settings.host}/actuator/health`
     }).then((response) => {
       ActuatorService.health = response;
     });

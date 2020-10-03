@@ -8,7 +8,7 @@ const SecurityLogService = {
   findAll: (page) => {
     m.request({
       method: 'GET',
-      url: `${settings.host}:${settings.port}/${settings.version}/accounts/me/security/logs?page=${page}`,
+      url: `${settings.host}/${settings.version}/accounts/me/security/logs?page=${page}`,
       headers: {
         Authorization: `Bearer ${authService.accessToken}`
       }
@@ -19,7 +19,7 @@ const SecurityLogService = {
   downloadAll: () => {
     m.request({
       method: 'GET',
-      url: `${settings.host}:${settings.port}/${settings.version}/accounts/me/security/logs/download`,
+      url: `${settings.host}/${settings.version}/accounts/me/security/logs/download`,
       responseType: 'text',
       extract: (xhr) => {
         return {

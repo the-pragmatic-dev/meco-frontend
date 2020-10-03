@@ -12,7 +12,7 @@ const AuthService = {
   signin: (username, password) => {
     return m.request({
       method: 'POST',
-      url: `${settings.host}:${settings.port}/${settings.version}/auth/signin`,
+      url: `${settings.host}/${settings.version}/auth/signin`,
       headers: { 'User-Agent': navigator.userAgent },
       body: { username: username, password: password }
     }).then(function (response) {
@@ -31,7 +31,7 @@ const AuthService = {
   forgotPassword: (username) => {
     return m.request({
       method: 'POST',
-      url: `${settings.host}:${settings.port}/${settings.version}/auth/forgot?username=${username}`,
+      url: `${settings.host}/${settings.version}/auth/forgot?username=${username}`,
       headers: { 'User-Agent': navigator.userAgent }
     }).then(function (response) {
     }).catch(function (e) {

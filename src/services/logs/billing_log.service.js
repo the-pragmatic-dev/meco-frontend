@@ -8,7 +8,7 @@ const BillingLogService = {
   findAll: (page) => {
     m.request({
       method: 'GET',
-      url: `${settings.host}:${settings.port}/${settings.version}/accounts/me/billing/logs?page=${page}`,
+      url: `${settings.host}/${settings.version}/accounts/me/billing/logs?page=${page}`,
       headers: {
         Authorization: `Bearer ${authService.accessToken}`
       }
@@ -19,7 +19,7 @@ const BillingLogService = {
   downloadAll: () => {
     m.request({
       method: 'GET',
-      url: `${settings.host}:${settings.port}/${settings.version}/accounts/me/billing/logs/download`,
+      url: `${settings.host}/${settings.version}/accounts/me/billing/logs/download`,
       responseType: 'text',
       extract: (xhr) => {
         return {

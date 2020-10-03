@@ -10,7 +10,7 @@ const KeyService = {
     if (!Array.isArray(KeyService.keys) || !KeyService.keys.length) {
       m.request({
         method: 'GET',
-        url: `${settings.host}:${settings.port}/${settings.version}/api-keys`,
+        url: `${settings.host}/${settings.version}/api-keys`,
         headers: {
           Authorization: `Bearer ${authService.accessToken}`
         }
@@ -34,7 +34,7 @@ const KeyService = {
   create: (name) => {
     m.request({
       method: 'POST',
-      url: `${settings.host}:${settings.port}/${settings.version}/api-keys`,
+      url: `${settings.host}/${settings.version}/api-keys`,
       headers: {
         Authorization: `Bearer ${authService.accessToken}`,
         'User-Agent': navigator.userAgent
@@ -48,7 +48,7 @@ const KeyService = {
   update: (key) => {
     m.request({
       method: 'PUT',
-      url: `${settings.host}:${settings.port}/${settings.version}/api-keys/${key.id}`,
+      url: `${settings.host}/${settings.version}/api-keys/${key.id}`,
       headers: {
         Authorization: `Bearer ${authService.accessToken}`
       },
@@ -58,7 +58,7 @@ const KeyService = {
   delete: (key) => {
     m.request({
       method: 'DELETE',
-      url: `${settings.host}:${settings.port}/${settings.version}/api-keys/${key.id}`,
+      url: `${settings.host}/${settings.version}/api-keys/${key.id}`,
       headers: {
         Authorization: `Bearer ${authService.accessToken}`
       }

@@ -8,7 +8,7 @@ const KeyLogService = {
   findAllById: (id, page) => {
     m.request({
       method: 'GET',
-      url: `${settings.host}:${settings.port}/${settings.version}/api-keys/${id}/logs?page=${page}`,
+      url: `${settings.host}/${settings.version}/api-keys/${id}/logs?page=${page}`,
       headers: {
         Authorization: `Bearer ${authService.accessToken}`
       }
@@ -19,7 +19,7 @@ const KeyLogService = {
   downloadAllById: (id) => {
     m.request({
       method: 'GET',
-      url: `${settings.host}:${settings.port}/${settings.version}/api-keys/${id}/logs/download`,
+      url: `${settings.host}/${settings.version}/api-keys/${id}/logs/download`,
       responseType: 'text',
       extract: (xhr) => {
         return {
