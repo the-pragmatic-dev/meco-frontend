@@ -2,7 +2,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 if (isProduction) {
   module.exports = {
-    host: 'https://meco.dev',
+    host: 'https://api.meco.dev',
     port: 8080,
     version: 'v1',
     maxKeys: 10
