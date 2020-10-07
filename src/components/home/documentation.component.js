@@ -319,7 +319,7 @@ module.exports = (initialVnode) => {
                 m('li', link('docs-quick-start-response', 'Response'))
               ])),
               m('li', link('docs-versioning', 'Versioning')),
-              m('li', m('span', 'Moderation Endpoints'), m('ul.no-style', [
+              m('li', m('span', link('docs-moderation-endpoints', 'Moderation Endpoints')), m('ul.no-style', [
                 m('li', 'Authentication'),
                 m('li', 'Image'),
                 m('li', 'Text')
