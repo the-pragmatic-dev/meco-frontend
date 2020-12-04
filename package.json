@@ -28,7 +28,7 @@
     "chartist-plugin-tooltips": "0.0.17",
     "classnames": "^2.2.6",
     "content-disposition": "^0.5.3",
-    "highlight.js": "^10.2.0",
+    "highlight.js": "^10.4.1",
     "mithril": "^2.0.4",
     "moment": "^2.24.0"
   },
