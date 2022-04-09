@@ -30,7 +30,7 @@
     "content-disposition": "^0.5.3",
     "highlight.js": "^10.2.0",
     "mithril": "^2.0.4",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
